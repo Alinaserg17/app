@@ -5,10 +5,10 @@
         </div>
         <div class="menu">
             <ul>
-                <li><span>🏠</span><a href="#">Главная</a></li>
-                <li><span>📕</span><a href="#">Курсы</a></li>
-                <li><span>📖</span><a href="#">Задания</a></li>
-                <li><span>🙍‍♂️</span><a href="#">Профиль</a></li>
+                <li><span>🏠</span><NuxtLink to="/">Главная</NuxtLink></li>
+                <li><span>📕</span><NuxtLink to="/courses">Курсы</NuxtLink></li>
+                <li><span>📖</span><NuxtLink to="/tasks">Задания</NuxtLink></li>
+                <li><span>🙍‍♂️</span><NuxtLink to="/profile">Профиль</NuxtLink></li>
             </ul>
         </div>
     </div>
