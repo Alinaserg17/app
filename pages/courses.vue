@@ -10,16 +10,16 @@ console.log(data.value);
                 <img v-bind:src="course.url" alt="">
             </div>
             <div class="info">
-                <h3>{{course.name}}</h3>
-                <p>{{ course.description}}</p>
+                <NuxtLink v-bind:to="'/course/' + course.id">
+                    <h3>{{ course.name }}</h3>
+                </NuxtLink>
+                <p>{{ course.description }}</p>
             </div>
         </div>
     </div>
 </template>
 
 <style scoped>
-
-
 .course {
     display: flex;
     border: 2px solid #36111b;
@@ -29,9 +29,18 @@ console.log(data.value);
     align-items: center;
     gap: 18px;
 }
+
 .course img {
-width: 150px;
-border-radius: 10px;
+    width: 150px;
+    border-radius: 10px;
 }
 
+h3 {
+    cursor: pointer;
+}
+
+a {
+    color: rgb(15, 0, 0);
+    text-decoration: none;
+}
 </style>
