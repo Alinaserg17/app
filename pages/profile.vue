@@ -4,9 +4,11 @@ const edit = ref(false)
 <template>
     <div class="page">
         <h1>Профиль</h1>
-        <button>Редактировать</button>
+        <button v-on:click="edit = !edit">Редактировать</button>
         <div class="view" v-if="!edit">
             <p>Пользователь</p>
+
+            <profileTabs/> 
         </div>
         <div class="edit" v-else>
 
