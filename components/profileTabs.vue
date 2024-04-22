@@ -1,5 +1,5 @@
 <script setup>
-const { data } = await useFetch("/api/profileTabs");
+const { data } = await useFetch("/api/user");
 console.log(data.value);
 const tab = ref('common')
 </script>
@@ -13,7 +13,7 @@ const tab = ref('common')
     <div class="info" v-if="tab === 'common'">
         <h2>Общее</h2>
         <h3>ФИО</h3>
-        <p>{{date.lastname}}{{ date.name }}{{ date.middlename }}</p>
+        <p>{{data.lastname}}{{ data.name }}{{ data.middlename }}</p>
     </div>
 
     <div class="info" v-if="tab === 'education'">
